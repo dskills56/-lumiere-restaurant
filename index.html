@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumière Kitchen & Wine — a fictional fine-dining restaurant concept by Brightshore Technologies." />
+  <title>Lumière | Kitchen & Wine — Portfolio Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="demo-banner">PORTFOLIO DEMO · Fictional restaurant · No real reservations or payments</div>
+  <header class="site-header" id="top">
+    <div class="nav-shell container">
+      <a class="brand" href="#top" aria-label="Lumière home"><span>LUMIÈRE</span><small>KITCHEN & WINE</small></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="#story">OUR STORY</a><a href="#menu">MENU</a><a href="#reservations">RESERVATIONS</a><a href="#gallery">GALLERY</a><a href="#events">PRIVATE EVENTS</a><a href="#contact">CONTACT</a>
+      </nav>
+      <button class="cart-button" id="cart-open" aria-label="Open order cart">ORDER <span id="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow light">AN EXPERIENCE TO REMEMBER</p>
+        <h1 id="hero-heading">SAVOR <em>the</em><br />MOMENT</h1>
+        <p>A seasonal menu inspired by exceptional ingredients, thoughtfully prepared and beautifully served.</p>
+        <a href="#menu" class="button button-olive">EXPLORE OUR MENU</a>
+      </div>
+    </section>
+
+    <section id="reservations" class="reservation-strip" aria-labelledby="reservation-heading">
+      <form id="reservation-form" class="container reservation-inner">
+        <div class="reservation-label"><span class="calendar-icon" aria-hidden="true">▦</span><div><small>MAKE A</small><h2 id="reservation-heading">RESERVATION</h2></div></div>
+        <label><span class="sr-only">Reservation date</span><input id="res-date" type="date" required /></label>
+        <label><span class="sr-only">Reservation time</span><select id="res-time" required><option value="">SELECT TIME</option><option>5:00 PM</option><option>5:30 PM</option><option>6:00 PM</option><option>6:30 PM</option><option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option></select></label>
+        <label><span class="sr-only">Number of guests</span><select id="res-guests" required><option value="">GUESTS</option><option value="1">1 Guest</option><option value="2">2 Guests</option><option value="3">3 Guests</option><option value="4">4 Guests</option><option value="5">5 Guests</option><option value="6">6 Guests</option><option value="7">7 Guests</option><option value="8">8 Guests</option></select></label>
+        <button class="button button-cream" type="submit">BOOK A TABLE</button>
+      </form>
+    </section>
+
+    <section class="highlights section-pad" aria-labelledby="highlights-heading">
+      <div class="container center">
+        <p class="eyebrow">MENU PREVIEW</p><h2 class="section-title" id="highlights-heading">CULINARY HIGHLIGHTS</h2>
+        <div class="highlight-grid">
+          <article class="highlight-card"><img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=85" alt="Elegantly plated seafood entrée" loading="lazy" /><h3>SEARED SCALLOPS</h3><p>Pea purée, crispy pancetta, micro herbs</p><strong>$18</strong></article>
+          <article class="highlight-card"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=85" alt="Freshly prepared pasta with herbs" loading="lazy" /><h3>WILD MUSHROOM PAPPARDELLE</h3><p>Truffle cream, parmesan, chive oil</p><strong>$24</strong></article>
+          <article class="highlight-card"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=85" alt="Rich plated dessert" loading="lazy" /><h3>DARK CHOCOLATE TART</h3><p>Hazelnut praline, chantilly cream</p><strong>$12</strong></article>
+        </div><a href="#menu" class="underlined-link">VIEW FULL MENU</a>
+      </div>
+    </section>
+
+    <section id="story" class="story-section section-pad"><div class="container story-grid"><div class="story-photo"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1100&q=85" alt="Warmly lit fine-dining restaurant interior" loading="lazy" /></div><div class="story-copy"><p class="eyebrow light">OUR PHILOSOPHY</p><h2 class="section-title">A TABLE FOR <em>every</em> OCCASION</h2><p>At Lumière, dining is about slowing down, gathering close, and celebrating the little things. Our fictional kitchen brings seasonal ingredients and modern technique together in a welcoming atmosphere.</p><p>Every plate is designed to feel special. Every evening deserves a story.</p><a class="button button-outline" href="#events">CELEBRATE WITH US</a></div></div></section>
+
+    <section id="menu" class="full-menu section-pad"><div class="container"><div class="center"><p class="eyebrow">CRAFTED WITH CARE</p><h2 class="section-title">EXPLORE OUR MENU</h2><p class="section-intro">Choose a category, discover a favorite, and add dishes to your demo order.</p></div><div class="filter-bar" id="menu-filters" aria-label="Menu categories"><button class="filter active" data-filter="all" aria-pressed="true">ALL</button><button class="filter" data-filter="starters" aria-pressed="false">STARTERS</button><button class="filter" data-filter="mains" aria-pressed="false">MAINS</button><button class="filter" data-filter="desserts" aria-pressed="false">DESSERTS</button><button class="filter" data-filter="drinks" aria-pressed="false">DRINKS</button></div><div id="menu-grid" class="menu-grid"></div></div></section>
+
+    <section id="gallery" class="gallery-section section-pad"><div class="container center"><p class="eyebrow">THE ATMOSPHERE</p><h2 class="section-title">MOMENTS AT LUMIÈRE</h2><div class="gallery-grid"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85" alt="Restaurant dining room" loading="lazy" /><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85" alt="Colorful plated seasonal cuisine" loading="lazy" /><img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=85" alt="Table set for a special meal" loading="lazy" /></div></div></section>
+
+    <section id="events" class="events-section section-pad"><div class="container events-grid"><div><p class="eyebrow light">MAKE IT MEMORABLE</p><h2 class="section-title">PRIVATE <em>events</em><br />& CELEBRATIONS</h2><p>From intimate dinners to milestone celebrations, let us help you imagine the perfect gathering.</p><p class="muted-note">Demo only — submitting this form displays a local confirmation and does not send a message.</p></div><form id="events-form" class="events-form"><label>Your name<input type="text" name="name" autocomplete="name" maxlength="80" required placeholder="Full name" /></label><label>Email address<input type="email" name="email" autocomplete="email" maxlength="120" required placeholder="you@example.com" /></label><label>Event type<select name="event" required><option value="">Select an occasion</option><option>Birthday</option><option>Anniversary</option><option>Corporate dinner</option><option>Other celebration</option></select></label><label>Tell us about your event<textarea name="details" rows="4" maxlength="1000" required placeholder="Date, number of guests, and special requests"></textarea></label><button type="submit" class="button button-cream">SEND DEMO INQUIRY</button></form></div></section>
+
+    <section id="contact" class="contact-section section-pad"><div class="container center"><p class="eyebrow">VISIT US</p><h2 class="section-title">WE SAVED YOU A SEAT</h2><p>Lumière Kitchen & Wine is a fictional restaurant concept created for the Brightshore Technologies portfolio.</p><p>Hours, location, reservations, and ordering are for demonstration only.</p><a class="underlined-link" href="#reservations">TRY A DEMO RESERVATION</a></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#top"><span>LUMIÈRE</span><small>KITCHEN & WINE</small></a><p>Fictional restaurant portfolio demonstration · Built by Brightshore Technologies</p><a href="https://dskills56.github.io/brightshore-technologies/" target="_blank" rel="noopener noreferrer">BRIGHTSHORE TECHNOLOGIES ↗</a></div></footer>
+
+  <div class="modal-backdrop" id="modal-backdrop" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button id="modal-close" class="modal-close" aria-label="Close dialog">×</button><h2 id="modal-title">Demo confirmation</h2><p id="modal-message"></p><button class="button button-olive" id="modal-ok">GOT IT</button></div></div>
+  <div class="cart-backdrop" id="cart-backdrop" hidden></div><aside class="cart-drawer" id="cart-drawer" aria-label="Demo order cart" aria-hidden="true"><div class="cart-header"><h2>YOUR ORDER</h2><button id="cart-close" aria-label="Close cart">×</button></div><p class="cart-note">Demo cart only — no real payment or order will be placed.</p><div id="cart-items" class="cart-items"></div><div class="cart-footer"><div class="cart-total"><span>SUBTOTAL</span><strong id="cart-total">$0.00</strong></div><p>Taxes and delivery are not calculated in this demonstration.</p><button class="button button-olive" id="checkout" type="button">DEMO CHECKOUT</button></div></aside>
+</body>
+</html>
